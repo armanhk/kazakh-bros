@@ -12,13 +12,8 @@ GameObject:
   - component: {fileID: 6780848823687480473}
   - component: {fileID: 6780848823687480475}
   - component: {fileID: 6780848823687480676}
-  - component: {fileID: 6780848823687480474}
-  - component: {fileID: 6780848823687480677}
-  - component: {fileID: 6780848823687480678}
-  - component: {fileID: 6780848823687480679}
   - component: {fileID: 5714998381545437984}
   - component: {fileID: 903044750124352907}
-  - component: {fileID: 7676661307878137858}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -120,69 +115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac580ab043f144228170b596b309340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6780848823687480473}
-  animator: {fileID: 6780848823687480475}
-  state: 0
---- !u!114 &6780848823687480474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780848823687480479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5867f7192460b417d97753064dc3c28b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateSprite: {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e,
-    type: 3}
-  StateAC: {fileID: 9100000, guid: 7843df7730432c14ea39bb81a273b3a1, type: 2}
---- !u!114 &6780848823687480677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780848823687480479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c37779e5caabc41a2949e936f1f211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateSprite: {fileID: 4944230376442633554, guid: 19f2f91e3fdfd8740b7c57578eee70ed,
-    type: 3}
-  StateAC: {fileID: 9100000, guid: 7de8f5a73a4ff044081589921925d7bb, type: 2}
---- !u!114 &6780848823687480678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780848823687480479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7c1fbe4f15d94aa6a7938608e2153d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateSprite: {fileID: 6934013284892070054, guid: 436f7e3fce8b2fb4a86074ec1b14efdf,
-    type: 3}
-  StateAC: {fileID: 9100000, guid: c6d938cf86e31ca4fbf4e755b2e2696a, type: 2}
---- !u!114 &6780848823687480679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780848823687480479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc06c78b59fcf43b3bd0a536f5778296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateSprite: {fileID: 7460046300004610927, guid: 206b2c968fc112143a4255529de21650,
-    type: 3}
-  StateAC: {fileID: 9100000, guid: 1cac20e9043846d498f4061c92140d3c, type: 2}
+  heroRenderer: {fileID: 6780848823687480473}
+  heroAnimator: {fileID: 6780848823687480475}
+  stateSprites:
+  - {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e, type: 3}
+  stateControllers:
+  - {fileID: 9100000, guid: 7843df7730432c14ea39bb81a273b3a1, type: 2}
 --- !u!61 &5714998381545437984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -230,17 +168,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7676661307878137858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780848823687480479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a71619f923c494ab764eea6594619d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  jumpForce: 0
