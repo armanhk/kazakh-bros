@@ -1,17 +1,13 @@
 ﻿using System;
+using UnityEngine;
 
 namespace HeroFSM
 {
-    public enum HeroStates
-    {
-        IDLE,
-        RUNNING,
-    }
-
     public abstract class HeroState
     {
         protected Hero player;
-        public HeroStates stateName;
+        protected Sprite stateSprite;
+        protected RuntimeAnimatorController stateAC;
 
         public HeroState(Hero player)
         {
@@ -20,11 +16,21 @@ namespace HeroFSM
 
         public virtual void OnStateEnter()
         {
-            player.heroRenderer.sprite = player.stateSprites[(int)stateName];
-            player.heroAnimator.runtimeAnimatorController = player.stateControllers[(int)stateName];
+            player.heroRenderer.sprite = this.stateSprite;
+            player.heroAnimator.runtimeAnimatorController = this.stateAC;
         }
 
         public virtual void OnStateExit()
+        {
+
+        }
+
+        public virtual void OnUpdate()
+        {
+
+        }
+
+        public virtual void OnFixedUpdate()
         {
 
         }

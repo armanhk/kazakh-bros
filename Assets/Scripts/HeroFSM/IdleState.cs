@@ -6,7 +6,8 @@ namespace HeroFSM
     {
         public IdleState(Hero player) : base(player)
         {
-            stateName = HeroStates.IDLE;
+            this.stateSprite = player.idleSprite;
+            this.stateAC = player.idleAC;
         }
     }
 

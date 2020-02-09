@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6780848823687480472}
   - component: {fileID: 6780848823687480473}
   - component: {fileID: 6780848823687480475}
-  - component: {fileID: 6780848823687480676}
   - component: {fileID: 5714998381545437984}
   - component: {fileID: 903044750124352907}
+  - component: {fileID: 7235913679371426574}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6780848823687480479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 2071832411
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,24 +103,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6780848823687480676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780848823687480479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac580ab043f144228170b596b309340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroRenderer: {fileID: 6780848823687480473}
-  heroAnimator: {fileID: 6780848823687480475}
-  stateSprites:
-  - {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e, type: 3}
-  stateControllers:
-  - {fileID: 9100000, guid: 7843df7730432c14ea39bb81a273b3a1, type: 2}
 --- !u!61 &5714998381545437984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,9 +144,37 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &7235913679371426574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780848823687480479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac580ab043f144228170b596b309340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroRenderer: {fileID: 6780848823687480473}
+  heroAnimator: {fileID: 6780848823687480475}
+  heroRigidbody: {fileID: 903044750124352907}
+  idleSprite: {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e,
+    type: 3}
+  runningSprite: {fileID: 4944230376442633554, guid: 19f2f91e3fdfd8740b7c57578eee70ed,
+    type: 3}
+  jumpingSprite: {fileID: 7460046300004610927, guid: 206b2c968fc112143a4255529de21650,
+    type: 3}
+  fallingSprite: {fileID: -5966621866309598838, guid: d05d588ffc7b32242b01180d10809589,
+    type: 3}
+  idleAC: {fileID: 9100000, guid: 7843df7730432c14ea39bb81a273b3a1, type: 2}
+  runningAC: {fileID: 9100000, guid: 7de8f5a73a4ff044081589921925d7bb, type: 2}
+  jumpingAC: {fileID: 9100000, guid: 1cac20e9043846d498f4061c92140d3c, type: 2}
+  maxSpeed: 35
+  movementScalar: 1000

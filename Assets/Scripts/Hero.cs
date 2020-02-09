@@ -3,21 +3,41 @@ using HeroFSM;
 
 public class Hero : MonoBehaviour
 {
-    // UnityEngine members (attach assets and components to these)
+    #region Members
+
+    // Setting hero
     public SpriteRenderer heroRenderer;
     public Animator heroAnimator;
-    public Sprite[] stateSprites;
-    public RuntimeAnimatorController[] stateControllers;
+    public Rigidbody2D heroRigidbody;
 
-    // State members
+    // State sprites
+    public Sprite idleSprite;
+    public Sprite runningSprite;
+    public Sprite jumpingSprite;
+    public Sprite fallingSprite;
+
+    // State animator controllers
+    public RuntimeAnimatorController idleAC;
+    public RuntimeAnimatorController runningAC;
+    public RuntimeAnimatorController jumpingAC;
+
+    // States
+    internal IdleState idleState;
+    internal RunningState runningState;
+
     public HeroState currentState;
-    static IdleState idleState;
+
+    public float maxSpeed;
+    public float movementScalar;
+
+
+    #endregion
 
     public void SetState(HeroState state)
     {
         if (currentState != null)
         {
-            // TODO: Add call to OnStateExit here if we need it
+            currentState.OnStateExit();
         }
 
         currentState = state;
@@ -34,13 +54,26 @@ public class Hero : MonoBehaviour
     {
         // Instantiate static states
         idleState = new IdleState(this);
+        runningState = new RunningState(this);
 
         SetState(idleState);
     }
 
     public void Update()
     {
+        currentState.OnUpdate();
+
+        if (Input.GetButtonDown("Horizontal") && currentState != runningState)
+        {
+            SetState(runningState);
+        }
+
         
+    }
+
+    public void FixedUpdate()
+    {
+        currentState.OnFixedUpdate();
     }
 
     #endregion
