@@ -34,5 +34,15 @@ namespace HeroFSM
         {
 
         }
+
+        public virtual void OnCollisionEnter(Collision2D collision)
+        {
+
+        }
+
+        public virtual void OnCollisionExit(Collision2D collision)
+        {
+
+        }
     }
 }

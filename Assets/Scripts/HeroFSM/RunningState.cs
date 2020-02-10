@@ -27,29 +27,16 @@ namespace HeroFSM
                 player.heroRenderer.flipX = false;
             }
 
-            // Start the velocity drop before exiting run state
-            if (Input.GetButtonUp("Horizontal"))
+            // Release button - player stops
+            if (Input.GetButton("Horizontal") != true)
             {
-                player.StartCoroutine(VelocityDrop());
+                player.heroRigidbody.velocity = Vector2.zero;
+                if (player.stateStack.Peek() != player.idleState)
+                {
+                    player.stateStack.Pop();
+                    player.TryTransition();
+                }
             }
-        }
-
-
-        /// <summary>
-        /// To be used as coroutine to exit running state
-        /// </summary>
-        /// <returns>wait until velocity magnitude drops by 1</returns>
-        IEnumerator VelocityDrop()
-        {
-            float magnitude = player.heroRigidbody.velocity.magnitude;
-            if (magnitude > 1)
-            {
-                yield return new WaitUntil(() => player.heroRigidbody.velocity.magnitude < magnitude - 1);
-            }
-
-            // Set state to idle
-            player.heroRigidbody.velocity = Vector2.zero;
-            player.SetState(player.idleState);
         }
 
         public override void OnFixedUpdate()
@@ -64,11 +51,6 @@ namespace HeroFSM
             {
                 player.heroRigidbody.AddForce(movement);
             }
-        }
-
-        public override void OnStateExit()
-        {
-            base.OnStateExit();
         }
     }
 }

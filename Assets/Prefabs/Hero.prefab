@@ -178,3 +178,5 @@ MonoBehaviour:
   jumpingAC: {fileID: 9100000, guid: 1cac20e9043846d498f4061c92140d3c, type: 2}
   maxSpeed: 35
   movementScalar: 1000
+  jumpScalar: 3000
+  isGrounded: 0

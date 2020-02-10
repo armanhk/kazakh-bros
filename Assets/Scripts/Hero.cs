@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using HeroFSM;
+using System.Collections.Generic;
 
 public class Hero : MonoBehaviour
 {
@@ -24,23 +25,27 @@ public class Hero : MonoBehaviour
     // States
     internal IdleState idleState;
     internal RunningState runningState;
+    internal JumpingState jumpingState;
 
     public HeroState currentState;
+    public Stack<HeroState> stateStack;
 
     public float maxSpeed;
     public float movementScalar;
+    public float jumpScalar;
 
+    public bool isGrounded;
 
     #endregion
 
-    public void SetState(HeroState state)
+    public void TryTransition()
     {
         if (currentState != null)
         {
             currentState.OnStateExit();
         }
 
-        currentState = state;
+        currentState = stateStack.Peek();
 
         if (currentState != null)
         {
@@ -55,25 +60,46 @@ public class Hero : MonoBehaviour
         // Instantiate static states
         idleState = new IdleState(this);
         runningState = new RunningState(this);
+        jumpingState = new JumpingState(this);
 
-        SetState(idleState);
+        stateStack = new Stack<HeroState>();
+        stateStack.Push(idleState);
+        TryTransition();
     }
 
     public void Update()
     {
         currentState.OnUpdate();
 
-        if (Input.GetButtonDown("Horizontal") && currentState != runningState)
+        if (Input.GetButtonDown("Horizontal") &&
+            stateStack.Contains(runningState) != true &&
+            currentState != jumpingState)
         {
-            SetState(runningState);
+            stateStack.Push(runningState);
+            TryTransition();
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Space) &&
+            stateStack.Peek() != jumpingState)
+        {
+            stateStack.Push(jumpingState);
+            TryTransition();
+        }
     }
 
     public void FixedUpdate()
     {
         currentState.OnFixedUpdate();
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        currentState.OnCollisionEnter(collision);
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        currentState.OnCollisionEnter(collision);
     }
 
     #endregion
