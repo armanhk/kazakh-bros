@@ -189,11 +189,15 @@ MonoBehaviour:
     type: 3}
   jumpingSprite: {fileID: 7460046300004610927, guid: 206b2c968fc112143a4255529de21650,
     type: 3}
-  fallingSprite: {fileID: -5966621866309598838, guid: d05d588ffc7b32242b01180d10809589,
+  primaryAttackSprite: {fileID: 6934013284892070054, guid: 436f7e3fce8b2fb4a86074ec1b14efdf,
+    type: 3}
+  secondaryAttackSprite: {fileID: 7441861488978599509, guid: 789874d4419b62d4b88074812a456faf,
     type: 3}
   idleAC: {fileID: 9100000, guid: 7843df7730432c14ea39bb81a273b3a1, type: 2}
   runningAC: {fileID: 9100000, guid: 7de8f5a73a4ff044081589921925d7bb, type: 2}
   jumpingAC: {fileID: 9100000, guid: 1cac20e9043846d498f4061c92140d3c, type: 2}
+  primaryAttackAC: {fileID: 9100000, guid: c6d938cf86e31ca4fbf4e755b2e2696a, type: 2}
+  secondaryAttackAC: {fileID: 9100000, guid: 2031b5129410696489c0141b40f516fd, type: 2}
   maxSpeed: 35
   movementScalar: 1000
   jumpScalar: 3000

@@ -15,17 +15,22 @@ public class Hero : MonoBehaviour
     public Sprite idleSprite;
     public Sprite runningSprite;
     public Sprite jumpingSprite;
-    public Sprite fallingSprite;
+    public Sprite primaryAttackSprite;
+    public Sprite secondaryAttackSprite;
 
     // State animator controllers
     public RuntimeAnimatorController idleAC;
     public RuntimeAnimatorController runningAC;
     public RuntimeAnimatorController jumpingAC;
+    public RuntimeAnimatorController primaryAttackAC;
+    public RuntimeAnimatorController secondaryAttackAC;
 
     // States
     internal IdleState idleState;
     internal RunningState runningState;
     internal JumpingState jumpingState;
+    internal PrimaryAttackState primaryAttackState;
+    internal SecondaryAttackState secondaryAttackState;
 
     public HeroState currentState;
     public Stack<HeroState> stateStack;
@@ -61,6 +66,8 @@ public class Hero : MonoBehaviour
         idleState = new IdleState(this);
         runningState = new RunningState(this);
         jumpingState = new JumpingState(this);
+        primaryAttackState = new PrimaryAttackState(this);
+        secondaryAttackState = new SecondaryAttackState(this);
 
         stateStack = new Stack<HeroState>();
         stateStack.Push(idleState);
@@ -79,10 +86,26 @@ public class Hero : MonoBehaviour
             TryTransition();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) &&
-            stateStack.Peek() != jumpingState)
+        if (Input.GetButtonDown("Jump") &&
+            currentState != jumpingState)
         {
             stateStack.Push(jumpingState);
+            TryTransition();
+        }
+
+        if (Input.GetMouseButtonDown(0) &&
+            currentState != primaryAttackState &&
+            currentState != jumpingState)
+        {
+            stateStack.Push(primaryAttackState);
+            TryTransition();
+        }
+
+        if (Input.GetMouseButtonDown(1) &&
+            currentState != secondaryAttackState &&
+            currentState != jumpingState)
+        {
+            stateStack.Push(secondaryAttackState);
             TryTransition();
         }
     }
