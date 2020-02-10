@@ -20,7 +20,6 @@ namespace HeroFSM
                 if (player.stateStack.Peek() != player.idleState)
                 {
                     player.stateStack.Pop();
-                    player.TryTransition();
                 }
             }
         }

@@ -33,7 +33,7 @@ public class Hero : MonoBehaviour
     internal SecondaryAttackState secondaryAttackState;
 
     public HeroState currentState;
-    public Stack<HeroState> stateStack;
+    public HeroStack<HeroState> stateStack;
 
     public float maxSpeed;
     public float movementScalar;
@@ -69,7 +69,7 @@ public class Hero : MonoBehaviour
         primaryAttackState = new PrimaryAttackState(this);
         secondaryAttackState = new SecondaryAttackState(this);
 
-        stateStack = new Stack<HeroState>();
+        stateStack = new HeroStack<HeroState>(this);
         stateStack.Push(idleState);
         TryTransition();
     }
@@ -83,14 +83,12 @@ public class Hero : MonoBehaviour
             currentState != jumpingState)
         {
             stateStack.Push(runningState);
-            TryTransition();
         }
 
         if (Input.GetButtonDown("Jump") &&
             currentState != jumpingState)
         {
             stateStack.Push(jumpingState);
-            TryTransition();
         }
 
         if (Input.GetMouseButtonDown(0) &&
@@ -98,7 +96,6 @@ public class Hero : MonoBehaviour
             currentState != jumpingState)
         {
             stateStack.Push(primaryAttackState);
-            TryTransition();
         }
 
         if (Input.GetMouseButtonDown(1) &&
@@ -106,7 +103,6 @@ public class Hero : MonoBehaviour
             currentState != jumpingState)
         {
             stateStack.Push(secondaryAttackState);
-            TryTransition();
         }
     }
 
