@@ -25,9 +25,11 @@ namespace HeroFSM
         {
             base.OnCollisionEnter(collision);
 
+
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                if (contact.normal.y > -5 && contact.normal.y < 5)
+
+                if (contact.normal.y <= 1 && contact.normal.y > 0.8)
                 {
                     player.isGrounded = true;
                 }
@@ -44,6 +46,14 @@ namespace HeroFSM
                 {
                     player.stateStack.Pop();
                     player.TryTransition();
+                }
+            }
+            else
+            {
+                // Prevent state hang when collision was with wall
+                if (player.heroRigidbody.velocity == Vector2.zero)
+                {
+                    player.isGrounded = true;
                 }
             }
         }
