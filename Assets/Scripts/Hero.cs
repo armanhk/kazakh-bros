@@ -58,6 +58,11 @@ public class Hero : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        this.transform.position = new Vector3(-118, -45, this.transform.position.z);
+    }
+
     #region Game Loop
 
     public void Start()
