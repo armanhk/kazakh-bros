@@ -17,10 +17,4 @@ public class SceneController : MonoBehaviour
     {
         playerSpeed = 10;
     }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
 }

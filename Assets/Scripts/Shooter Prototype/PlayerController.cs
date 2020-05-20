@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public ProjectileController projectilePrefab;
     private SceneController sceneController;
     private float objectWidth;
 
@@ -17,6 +18,18 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         MovePlayer();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(SpawnProjectile());
+        }
+    }
+
+    private IEnumerator SpawnProjectile()
+    {
+        ProjectileController instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+
+        yield return null;
     }
 
     private void MovePlayer()
