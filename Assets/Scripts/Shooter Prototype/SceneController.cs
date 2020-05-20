@@ -6,6 +6,7 @@ public class SceneController : MonoBehaviour
 {
     public float playerSpeed;
     public Vector2 screenBounds;
+    public EnemyController enemyPrefab;
 
     private void Awake()
     {
@@ -16,5 +17,16 @@ public class SceneController : MonoBehaviour
     private void Start()
     {
         playerSpeed = 10;
+        StartCoroutine(SpawnEnemy());
+    }
+
+    private IEnumerator SpawnEnemy()
+    {
+        Vector3 randomSpawnPoint = new Vector3(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y, 0);
+        Instantiate(enemyPrefab, randomSpawnPoint, Quaternion.identity);
+
+        yield return new WaitForSeconds(2);
+
+        yield return StartCoroutine(SpawnEnemy());
     }
 }

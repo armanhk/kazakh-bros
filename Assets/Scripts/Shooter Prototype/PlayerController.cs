@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour
     public ProjectileController projectilePrefab;
     private SceneController sceneController;
     private float objectWidth;
+    private float objectHeight;
 
     private void Awake()
     {
         sceneController = FindObjectOfType<SceneController>();
         objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x;
+        objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y;
     }
 
     private void Update()
@@ -27,7 +29,10 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator SpawnProjectile()
     {
-        ProjectileController instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        Vector3 projectileSpawnPoint = new Vector3(transform.position.x, 
+            transform.position.y + objectHeight / 2, 
+            transform.position.z);
+        ProjectileController instance = Instantiate(projectilePrefab, projectileSpawnPoint, Quaternion.identity);
 
         yield return null;
     }

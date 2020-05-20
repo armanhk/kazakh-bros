@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileController : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     private SceneController sceneController;
     private SpriteRenderer spriteRenderer;
@@ -15,10 +15,14 @@ public class ProjectileController : MonoBehaviour
         objectHeight = spriteRenderer.bounds.size.y;
     }
 
-    // Start is called before the first frame update
+    // Update is called once per frame
     private void Update()
     {
-        MoveProjectile();
+        MoveEnemy();
+        if (transform.position.y - objectHeight/2 <= -sceneController.screenBounds.y)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -26,16 +30,8 @@ public class ProjectileController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void MoveProjectile()
+    private void MoveEnemy()
     {
-        if (transform.position.y + objectHeight/2 >= sceneController.screenBounds.y)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            // Scale passed vector to manipulate projectile speed
-            transform.Translate(Vector2.up * Time.deltaTime * 5);
-        }
+        transform.Translate(Vector2.down * Time.deltaTime * 2);
     }
 }
