@@ -1,0 +1,1052 @@
+fileFormatVersion: 2
+guid: e9f2edcd288caeb44b47629106cba34a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7841020364355822112
+    second: ships-and-projectiles-sheet_0
+  - first:
+      213: 6253455779905102520
+    second: ships-and-projectiles-sheet_1
+  - first:
+      213: 7692636408646469173
+    second: ships-and-projectiles-sheet_2
+  - first:
+      213: -8220675915270586487
+    second: ships-and-projectiles-sheet_3
+  - first:
+      213: -4080503505173590718
+    second: ships-and-projectiles-sheet_4
+  - first:
+      213: 8418520354505800783
+    second: ships-and-projectiles-sheet_5
+  - first:
+      213: 5725887944978588867
+    second: ships-and-projectiles-sheet_6
+  - first:
+      213: -5121672877475257300
+    second: ships-and-projectiles-sheet_7
+  - first:
+      213: 3905895209221211903
+    second: ships-and-projectiles-sheet_8
+  - first:
+      213: -6359339519093806580
+    second: ships-and-projectiles-sheet_9
+  - first:
+      213: 1313533508157597272
+    second: ships-and-projectiles-sheet_10
+  - first:
+      213: -7902203745777223209
+    second: ships-and-projectiles-sheet_11
+  - first:
+      213: 5496115853511304977
+    second: ships-and-projectiles-sheet_12
+  - first:
+      213: -546330670982235268
+    second: ships-and-projectiles-sheet_13
+  - first:
+      213: 7506596702053920081
+    second: ships-and-projectiles-sheet_14
+  - first:
+      213: -8658382484835216804
+    second: ships-and-projectiles-sheet_15
+  - first:
+      213: 8921218589173523479
+    second: ships-and-projectiles-sheet_16
+  - first:
+      213: -7564885100247958851
+    second: ships-and-projectiles-sheet_17
+  - first:
+      213: -4534079241383861108
+    second: ships-and-projectiles-sheet_18
+  - first:
+      213: -6241305024223615829
+    second: ships-and-projectiles-sheet_19
+  - first:
+      213: 5881852766236416239
+    second: ships-and-projectiles-sheet_20
+  - first:
+      213: -9077692641681035125
+    second: ships-and-projectiles-sheet_21
+  - first:
+      213: 167190448361550050
+    second: ships-and-projectiles-sheet_22
+  - first:
+      213: 3271360149809176585
+    second: ships-and-projectiles-sheet_23
+  - first:
+      213: -3307174008457958152
+    second: ships-and-projectiles-sheet_24
+  - first:
+      213: -5820739267451861808
+    second: ships-and-projectiles-sheet_25
+  - first:
+      213: 3607059835112843063
+    second: ships-and-projectiles-sheet_26
+  - first:
+      213: 3410876894902194827
+    second: ships-and-projectiles-sheet_27
+  - first:
+      213: -9133192742444135661
+    second: ships-and-projectiles-sheet_28
+  - first:
+      213: 4261336276284155782
+    second: ships-and-projectiles-sheet_29
+  - first:
+      213: 954174454671924024
+    second: ships-and-projectiles-sheet_30
+  - first:
+      213: 5010351817904229740
+    second: ships-and-projectiles-sheet_31
+  - first:
+      213: 1674326268786125348
+    second: ships-and-projectiles-sheet_32
+  - first:
+      213: -6656649929163838750
+    second: ships-and-projectiles-sheet_33
+  - first:
+      213: 8965923985007334714
+    second: ships-and-projectiles-sheet_34
+  - first:
+      213: -4061529450736592452
+    second: ships-and-projectiles-sheet_35
+  - first:
+      213: 4847466562367300455
+    second: ships-and-projectiles-sheet_36
+  - first:
+      213: -2436732741067006085
+    second: ships-and-projectiles-sheet_37
+  - first:
+      213: 5614422715853182479
+    second: ships-and-projectiles-sheet_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 3153
+        width: 133
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed97f9a5891f2390800000000000000
+      internalID: -7841020364355822112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 3114
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b26bdb46ecb8c650800000000000000
+      internalID: 6253455779905102520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 3106
+        width: 21
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5360c9b6e0cb1ca60800000000000000
+      internalID: 7692636408646469173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 3106
+        width: 21
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fffa06fca4aed80800000000000000
+      internalID: -8220675915270586487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 3114
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d44657ea32f57c0800000000000000
+      internalID: -4080503505173590718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2874
+        width: 133
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cb6b0c8a794d470800000000000000
+      internalID: 8418520354505800783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 2846
+        width: 32
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4e328bfb0767f40800000000000000
+      internalID: 5725887944978588867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 2846
+        width: 34
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24a55a57a92ce8b0800000000000000
+      internalID: -5121672877475257300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 2625
+        width: 197
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6c78b9ff6843630800000000000000
+      internalID: 3905895209221211903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2565
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a6f4e86661fb7a0800000000000000
+      internalID: -6359339519093806580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2565
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8566e4a24cb9a3210800000000000000
+      internalID: 1313533508157597272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 2357
+        width: 205
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9ff269f8bb55290800000000000000
+      internalID: -7902203745777223209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2310
+        width: 33
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1172fe4cf30264c40800000000000000
+      internalID: 5496115853511304977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 2310
+        width: 33
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bf33a362b0b68f0800000000000000
+      internalID: -546330670982235268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 2105
+        width: 197
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15dea0acde9cc2860800000000000000
+      internalID: 7506596702053920081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2053
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52deed010f37d780800000000000000
+      internalID: -8658382484835216804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2053
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714ac4b4a098ecb70800000000000000
+      internalID: 8921218589173523479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1858
+        width: 101
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba3311f411240790800000000000000
+      internalID: -7564885100247958851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1798
+        width: 37
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84a7d9d3f6b311c0800000000000000
+      internalID: -4534079241383861108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1610
+        width: 101
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba46a48f52e6269a0800000000000000
+      internalID: -6241305024223615829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1546
+        width: 29
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe89ba07de980a150800000000000000
+      internalID: 5881852766236416239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1577
+        width: 37
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80bc6853ae850280800000000000000
+      internalID: -9077692641681035125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1546
+        width: 28
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0bd64b3daf15200800000000000000
+      internalID: 167190448361550050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1333
+        width: 197
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900aebd49b4366d20800000000000000
+      internalID: 3271360149809176585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1286
+        width: 57
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc657fe2ce8a12d0800000000000000
+      internalID: -3307174008457958152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1286
+        width: 57
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d44d51d974983fa0800000000000000
+      internalID: -5820739267451861808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1081
+        width: 205
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737ea7b1fc9de0230800000000000000
+      internalID: 3607059835112843063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1041
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b829b3dd67ed55f20800000000000000
+      internalID: 3410876894902194827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1033
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b01792791604180800000000000000
+      internalID: -9133192742444135661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1041
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687276804ce432b30800000000000000
+      internalID: 4261336276284155782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 854
+        width: 101
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bd8707c98ed3d00800000000000000
+      internalID: 954174454671924024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 802
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d0ae1be68588540800000000000000
+      internalID: 5010351817904229740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 466
+        width: 205
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a2a19ded66c3710800000000000000
+      internalID: 1674326268786125348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 410
+        width: 21
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea6f0a6824de93a0800000000000000
+      internalID: -6656649929163838750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 438
+        width: 61
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3554816c5c5d6c70800000000000000
+      internalID: 8965923985007334714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 410
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9de04cb7c82a7c0800000000000000
+      internalID: -4061529450736592452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 90
+        width: 204
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763ac7ec729a54340800000000000000
+      internalID: 4847466562367300455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 53
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f132c7b7cfe2ed0800000000000000
+      internalID: -2436732741067006085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ships-and-projectiles-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 53
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06105da6bf6aed40800000000000000
+      internalID: 5614422715853182479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
