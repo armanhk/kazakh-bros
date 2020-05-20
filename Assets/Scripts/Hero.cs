@@ -1,96 +1,129 @@
 ﻿using UnityEngine;
+using HeroFSM;
+using System.Collections.Generic;
 
 public class Hero : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-    public Animator animator;
-    public StateEnum state;
-    public IState current;
+    #region Members
 
-    #region State
+    // Setting hero
+    public SpriteRenderer heroRenderer;
+    public Animator heroAnimator;
+    public Rigidbody2D heroRigidbody;
 
-    public void SetState(StateEnum s, string input = null)
-    {
-        switch (s)
-        {
-            case StateEnum.IDLE:
-                current = gameObject.GetComponent<Idle>();
-                current.UpdateState(this, spriteRenderer, animator, input);
-                break;
+    // State sprites
+    public Sprite idleSprite;
+    public Sprite runningSprite;
+    public Sprite jumpingSprite;
+    public Sprite primaryAttackSprite;
+    public Sprite secondaryAttackSprite;
 
-            case StateEnum.RUNNING:
-                current = gameObject.GetComponent<Running>();
-                current.UpdateState(this, spriteRenderer, animator, input);
-                break;
+    // State animator controllers
+    public RuntimeAnimatorController idleAC;
+    public RuntimeAnimatorController runningAC;
+    public RuntimeAnimatorController jumpingAC;
+    public RuntimeAnimatorController primaryAttackAC;
+    public RuntimeAnimatorController secondaryAttackAC;
 
-            case StateEnum.JUMPING:
-                current = gameObject.GetComponent<Jumping>();
-                current.UpdateState(this, spriteRenderer, animator, input);
-                break;
+    // States
+    internal IdleState idleState;
+    internal RunningState runningState;
+    internal JumpingState jumpingState;
+    internal PrimaryAttackState primaryAttackState;
+    internal SecondaryAttackState secondaryAttackState;
 
-            case StateEnum.ATTACKING:
-                current = gameObject.GetComponent<Attacking>();
-                current.UpdateState(this, spriteRenderer, animator, input);
-                break;
-        }
-    }
+    public HeroState currentState;
+    public HeroStack<HeroState> stateStack;
 
-    public void TryGetTransition()
-    {
-        // Store this long list of cases where state should change to IDLE
-        bool returnToIdle = Input.GetKeyUp(KeyCode.RightArrow)
-            || Input.GetKeyUp(KeyCode.D)
-            || Input.GetKeyUp(KeyCode.LeftArrow)
-            || Input.GetKeyUp(KeyCode.A);
+    public float maxSpeed;
+    public float movementScalar;
+    public float jumpScalar;
 
-        // Run left
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-        {
-            SetState(StateEnum.RUNNING, "Left");
-        }
-        // Run right
-        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-        {
-            SetState(StateEnum.RUNNING, "Right");
-        }
-        // Jump
-        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-        {
-            SetState(StateEnum.JUMPING);
-        }
-        //Attack
-        else if (Input.GetMouseButtonDown(0))
-        {
-            SetState(StateEnum.ATTACKING);
-        }
-        // Idle
-        else if (returnToIdle)
-        {
-            SetState(StateEnum.IDLE);
-        }
-    }
+    public bool isGrounded;
 
     #endregion
 
-    #region Methods
+    public void TryTransition()
+    {
+        if (currentState != null)
+        {
+            currentState.OnStateExit();
+        }
 
+        currentState = stateStack.Peek();
 
+        if (currentState != null)
+        {
+            currentState.OnStateEnter();
+        }
+    }
 
-    #endregion
+    public void Reset()
+    {
+        this.transform.position = new Vector3(-118, -45, this.transform.position.z);
+    }
 
     #region Game Loop
 
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        current = gameObject.GetComponent<Idle>();
-        current.Enter(this, spriteRenderer, animator);
+        // Instantiate static states
+        idleState = new IdleState(this);
+        runningState = new RunningState(this);
+        jumpingState = new JumpingState(this);
+        primaryAttackState = new PrimaryAttackState(this);
+        secondaryAttackState = new SecondaryAttackState(this);
+
+        stateStack = new HeroStack<HeroState>(this);
+        stateStack.Push(idleState);
+        TryTransition();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        TryGetTransition();
+        currentState.OnUpdate();
+
+        if (Input.GetButtonDown("Horizontal") &&
+            stateStack.Contains(runningState) != true &&
+            currentState != jumpingState)
+        {
+            stateStack.Push(runningState);
+        }
+
+        if (Input.GetButtonDown("Jump") &&
+            currentState != jumpingState)
+        {
+            stateStack.Push(jumpingState);
+        }
+
+        if (Input.GetMouseButtonDown(0) &&
+            currentState != primaryAttackState &&
+            currentState != jumpingState)
+        {
+            stateStack.Push(primaryAttackState);
+        }
+
+        if (Input.GetMouseButtonDown(1) &&
+            currentState != secondaryAttackState &&
+            currentState != jumpingState)
+        {
+            stateStack.Push(secondaryAttackState);
+        }
+    }
+
+    public void FixedUpdate()
+    {
+        currentState.OnFixedUpdate();
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        currentState.OnCollisionEnter(collision);
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        currentState.OnCollisionEnter(collision);
     }
 
     #endregion
